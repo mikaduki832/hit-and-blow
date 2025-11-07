@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HIT & BLOW</title>
+    <meta name="description" content="示された数字を当てろ、4桁の練習モード">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ress/dist/ress.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/config.js" defer></script>
+    <script src="js/game.js" defer></script>
+    <script src="js/utils.js" defer></script>
+    <script src="js/ui.js" defer></script>
+    <script src="js/event.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="inner">
+            <div class="answer">
+                <h3 class="text">Answer</h3>
+                <div class="answer-number"><span>?</span><span>?</span><span>?</span></div>
+            </div>
+            <div class="selected-numbers">
+                <h3 class="text">解答</h3>
+                <div class="entered-number">
+                    <div class="first-number"></div>
+                    <div class="second-number"></div>
+                    <div class="third-number"></div>
+                </div>
+                <table class="keyboard">
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td></td>
+                        <td>削除</td>
+                    </tr>
+                </table>
+                <div class="button">
+                    <button id='confirmed' class="btn">確定</button>
+                    <button id="reset" class="btn" style="display: none;">リセット</button>
+                </div>
+            </div>
+            <footer id="footer">
+                <div class="info2"></div>
+            </footer>
+        </div>
+        <div class="infomation">
+            <div class="info1"></div>
+            <div id="mobile">
+                <div class="phase"></div>
+                <div class="info3"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
