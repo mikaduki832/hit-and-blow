@@ -1,0 +1,284 @@
+html {
+    font-size: 100%;
+}
+
+body {
+    width: 100dvw;
+    height: 100dvh;
+    margin: 0 auto;
+}
+
+/* ボタン */
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.btn {
+    border: solid 2px #000;
+    color: #000;
+    border-radius: 20px;
+    padding: 10px 30px;
+    font-size: 1em;
+    box-shadow: 0 5px 0 #004;
+    display: inline-block;
+    background-color: yellow;
+}
+
+.btn:active {
+    transform: translateY(4px);
+    box-shadow: unset;
+}
+
+/* ゲーム画面 */
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* プレイヤーの入力情報 */
+
+.infomation {
+    height: 100%;
+    width: 30%;
+    color: #000;
+    overflow-y: auto;
+    border: 2px solid rgb(0, 100, 255);
+    background-color: rgba(0, 200, 255, 0.7);
+    text-align: center;
+}
+
+.inner {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 解答 */
+
+.answer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.answer h3 {
+    font-size: 3rem;
+}
+
+.answer-number {
+    font-size: 5rem;
+    font-weight: bold;
+    color: white;
+    background-color: crimson;
+    width: 300px;
+    height: 110px;
+    pointer-events: none;
+    user-select: none;
+    text-align: center;
+}
+
+.answer-number span {
+    margin: 0 8px;
+}
+
+/* 数字入力 */
+
+.selected-numbers {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.selected-numbers h3 {
+    font-size: 2rem;
+}
+
+.entered-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.first-number,
+.second-number,
+.third-number {
+    height: 5rem;
+    width: 5rem;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    background-color: blue;
+    color: #fff;
+}
+
+.selected {
+    border: 3px solid red;
+}
+
+.text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 3px 0;
+}
+
+/* エラーなどのUI表示 */
+
+#footer {
+    margin-top: 25px;
+    width: 80%;
+    height: 20%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 1.35rem;
+    text-align: center;
+}
+
+#mobile {
+    display: none;
+}
+
+.keyboard {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        justify-content: left;
+        gap: 5px;
+    }
+
+    .keyboard {
+        display: block;
+    }
+
+    .btn {
+        padding: 10px 15px;
+    }
+
+    td {
+        width: 55px;
+        height: 55px;
+        box-sizing: border-box;
+        text-align: center;
+        position: relative;
+        border: 1px solid #555;
+        font-size: 20px;
+        background-color: lightgoldenrodyellow;
+        font-weight: 500;
+    }
+
+    .infomation {
+        width: 50%;
+    }
+
+    #mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3px;
+    }
+
+    .info1 {
+        display: none;
+    }
+
+    .answer-number {
+        width: 180px;
+    }
+
+    .first-number,
+    .second-number,
+    .third-number {
+        height: 50px;
+        width: 50px;
+        font-size: 32px;
+    }
+
+    .text {
+        font-size: 1rem;
+    }
+    .shuffleText {
+        font-size: 0.865rem;
+        font-weight: 700;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    /* iPad向けスタイル */
+    .container {
+        justify-content: left;
+        gap: 5px;
+    }
+
+    .keyboard {
+        display: block;
+    }
+
+    .btn {
+        padding: 10px 15px;
+    }
+
+    td {
+        width: 100px;
+        height: 100px;
+        box-sizing: border-box;
+        text-align: center;
+        position: relative;
+        border: 1px solid #555;
+        font-size: 40px;
+        background-color: lightgoldenrodyellow;
+        font-weight: 500;
+    }
+
+    .infomation {
+        width: 50%;
+    }
+
+    .answer-number {
+        width: 300px;
+    }
+
+    .first-number,
+    .second-number,
+    .third-number {
+        height: 7.5rem;
+        width: 7.5rem;
+        font-size: 5rem;
+    }
+
+    #footer {
+        height: 10%;
+        font-size: 1rem;
+    }
+
+    .text {
+        font-size: 3rem;
+    }
+
+    .answer h3 {
+        font-size: 3rem;
+    }
+
+    .selected-numbers h3 {
+        font-size: 2rem;
+    }
+}
